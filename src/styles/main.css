@@ -1,0 +1,117 @@
+.wrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.info {
+    border: 1px solid;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start
+}
+.info__inner {
+    border: 1px solid;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.info__list {
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+}
+.info__list li{
+    font-weight: 700;
+    width: 100%;
+    font: 1.2em sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(241, 225, 241);
+    margin: 2% 0;
+}
+.row {
+    padding: 5px;
+    width: 5%;
+}
+.place {
+    padding: 5px;
+    width: 5%;
+}
+.price {
+    padding: 5px;
+    width: 5%;
+    vertical-align: middle;
+}
+.close {
+    padding: 5px;
+    width: 15%;
+    background-image: url("../assets/images/close.png");
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+.close:hover{
+    background-color: tomato;
+}
+.purchase {
+    border: 1px solid;
+    font-weight: 700;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(181, 178, 245);
+    color: white;
+    cursor: pointer;
+    height: 10%;
+}
+.purchase:hover{
+    background-color: rgb(255, 115, 0);
+}
+.cinema {
+    width: 50%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.cinema__inner {
+    border: 1px solid;
+    width: 80%;
+}
+
+.seats__list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.seats__list li{
+    display: flex;
+}
+.seat{
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+}
+.low{
+    background-color: rgb(227, 234, 255) !important;
+}
+.meddium{
+    background-color: rgb(255, 227, 227) !important;
+}
+.high{
+    background-color: rgb(211, 250, 185) !important;
+}
+.booked{
+    background-color: rgb(100, 100, 100) !important;
+}

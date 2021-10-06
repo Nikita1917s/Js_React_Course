@@ -1,0 +1,19 @@
+.container{
+    /* background: rgb(255, 102, 102); */
+    padding-top: 2rem;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    background-image: url("../assets/images/abc.png");
+}
+
+.logo{
+    background-image: url("../assets/images/abc.png");
+    background-size: cover;
+    width: 250px;
+    height: 80px;
+    margin: 0 auto;
+}  
