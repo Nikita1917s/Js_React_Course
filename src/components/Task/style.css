@@ -1,25 +1,3 @@
-.todo {
-  width: 300px;
-  min-height: 350px;
-  border: 1px solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.input {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.list__block {
-  min-height: 300px;
-  width: 100%;
-  background-color: antiquewhite;
-}
 
 .todo__list {
   padding: 0;
@@ -52,7 +30,7 @@
 .done {
   width: 50%;
   height: 30px;
-  background-image: url('./assets/check.svg.png');
+  background-image: url('../../assets/check.svg.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0 10px 0 0;
@@ -61,7 +39,7 @@
 .delete {
   width: 50%;
   height: 30px;
-  background-image: url('./assets/delete.png');
+  background-image: url('../../assets/delete.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -74,7 +52,7 @@
 .finished .done{
   text-decoration: line-through;
   background: rgb(255, 99, 99);
-  background-image: url('./assets/restart.png');
+  background-image: url('../../assets/restart.png');
   background-size: contain;
   background-repeat: no-repeat;
 }

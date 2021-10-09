@@ -1,0 +1,22 @@
+.todo {
+    width: 300px;
+    min-height: 350px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .input {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .list__block {
+    min-height: 300px;
+    width: 100%;
+    background-color: antiquewhite;
+  }
