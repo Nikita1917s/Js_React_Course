@@ -1,13 +1,117 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.content {
+  width: 79.5%;
+}
+.main,
+menu,
+.general {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+
+.text {
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+
+#root {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  width: 17.5%;
+  flex-wrap: wrap;
+  border: 1px solid;
+  height: 550px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1vw;
+}
+
+.item img {
+  width: 100px;
+}
+
+.item b {
+  display: block;
+  color: blue;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 30px;
+  font-weight: bold;
+  align-self: flex-end;
+  background-color: rgb(161, 255, 138);
+}
+
+h4,
+h3 {
+  width: 100%;
+  font-size: 28px;
+  text-align: center;
+}
+
+.info {
+  width: 100%;
+  background: rgb(246, 245, 255);
+  min-height: 25px;
+  border: solid 1px;
+  padding: 0 150px;
+}
+.infoCard {
+  display: flex;
+  align-items: center;
+}
+
+.infoCard h1 {
+  width: 5%;
+}
+
+.infoCard h3 {
+  width: 55%;
+}
+
+.infoCard h4,
+.infoCard h2 {
+  width: 20%;
+  text-align: center;
+}
+
+.infoCard h2 {
+  background-color: rgb(255, 100, 100);
+  cursor: pointer;
+}
+
+.total{
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  background: rgb(123, 248, 92);
 }
