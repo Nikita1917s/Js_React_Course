@@ -18,13 +18,13 @@ function Products() {
         <div className="products">
             <h1>Products</h1>
             <ul>
-                {list?.map(elem => <li key={elem.id}>
+                {list.length ? list?.map(elem => <li key={elem.id}>
                     <Link to={`${url}/${elem.id}`}>{elem.title}</Link>
                     <img src={elem.image} alt={elem.title}></img>
                     <h3>{elem.price}$</h3>
-                    <Button action={true} productId={elem.id} btn_name={constants.button.add_item} />
-                    <Button action={false} productId={elem.id} btn_name={constants.button.remove_item} />
-                </li>)}
+                    <Button action={true} productId={{id: elem.id, title: elem.title, image: elem.image, price: elem.price}} btn_name={constants.button.add_item} />
+                    <Button action={false} productId={{id: elem.id, title: elem.title, image: elem.image, price: elem.price}} btn_name={constants.button.remove_item} />
+                </li>) : <h2>Loading...</h2>}
             </ul>
         </div>
     );

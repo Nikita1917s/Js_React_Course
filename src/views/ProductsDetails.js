@@ -21,8 +21,8 @@ function ProductsDetails() {
             <img src={image} alt="" />
             <h3>{price}$</h3>
             <p>{description}</p>
-            <Button action={true} productId={+productId} btn_name={constants.button.add_item} />
-            <Button action={false} productId={+productId} btn_name={constants.button.remove_item} />
+            <Button action={true} productId={{ id: +productId, title: title, image: image, price: price }} btn_name={constants.button.add_item} />
+            <Button action={false} productId={{ id: +productId, title: title, image: image, price: price }} btn_name={constants.button.remove_item} />
         </div>
     );
 }
