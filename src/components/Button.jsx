@@ -1,17 +1,22 @@
 import { Button } from 'antd';
+import { useContext } from "react";
+import Context from '.././context'
 
 const ButtonTest = ({ action, productId, btn_name }) => {
 
-    let addToCart = ((action, product) => {
-        let localStore = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
+    const { cart, setCart } = useContext(Context)
 
-        if (searchID(localStore, product.id) === -1) {
-            let data = [...localStore, { id: product.id, title: product.title, image: product.image, price: product.price, amount: 1 }]
-            localStorage.setItem('cart', JSON.stringify(data))
+    let addToCart = ((action, product) => {
+        let storage = cart.length ? [...cart] : []
+
+        if (searchID(storage, product.id) === -1 && action) {
+            let data = [...storage, { id: product.id, title: product.title, image: product.image, price: product.price, amount: 1 }]
+            setCart(data)
         } else {
-            let data = JSON.parse(localStorage.getItem('cart'))
+            let data = [...cart]
             action ? data[searchID(data, product.id)]['amount']++ : (data[searchID(data, product.id)].amount > 1) ? data[searchID(data, product.id)]['amount']-- : data.splice((searchID(data, product.id)), 1)
-            localStorage.setItem('cart', JSON.stringify(data))
+            setCart([...data])
+            console.log(data)
         }
     })
 
