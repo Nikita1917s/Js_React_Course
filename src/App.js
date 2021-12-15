@@ -12,17 +12,23 @@ import ProductsDetails from "./views/ProductsDetails";
 
 !localStorage.getItem('cart') && localStorage.setItem('cart', '');
 
+const routs = [
+  {path: '/', component: Home, exact:true},
+  {path: '/products', component: Products, exact:true},
+  {path: '/products/:productId', component: ProductsDetails, exact:true},
+  {path: '/cart', component: Cart, exact:true},
+  {component: NotFound}
+]
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/products' exact component={Products} />
-          <Route path='/products/:productId' component={ProductsDetails} />
-          <Route path='/cart' component={Cart} />
-          <Route component={NotFound} />
+          {routs.map((item) => {
+            return <Route path={item.path} exact={item.exact} component={item.component} />
+          })}
         </Switch>
       </BrowserRouter>
     </div>
@@ -30,3 +36,9 @@ function App() {
 }
 
 export default App;
+
+{/* <Route path='/' exact component={Home} />
+<Route path='/products' exact component={Products} />
+<Route path='/products/:productId' component={ProductsDetails} />
+<Route path='/cart' component={Cart} />
+<Route component={NotFound} /> */}
