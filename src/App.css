@@ -1,38 +1,119 @@
-.App {
+.App :not(header) {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+header {
+  padding: 0 0 50px;
+}
+.App header ul {
+  padding: 15px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  background-color: rgb(163, 221, 255);
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+header ul li a {
+  padding: 15px !important;
+  text-decoration: none;
+  color: #000;
+  font: 1.5em sans-serif;
+}
+
+header ul li a:hover {
+  background: rgb(255, 134, 54);
+}
+
+.products,
+.products-details {
+  padding: 55px 15px;
+  background: rgb(235, 253, 205);
+}
+
+.products ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.title {
+  width: 50%;
+}
+
+.products ul li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  /* flex-wrap: wrap; */
+  margin: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.products ul li img {
+  width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.products ul li h3 {
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.products-details {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  flex-wrap: wrap;
+}
+
+.products-details img {
+  width: 35%;
+  text-align: center;
+}
+.products-details h1,
+.products-details h3,
+.products-details p {
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+}
+.cartItems {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+.cartItems li {
+  display: flex;
+  background: rgb(235, 253, 205);
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.cartBTN {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cartItems h3 {
+  width: 10%;
+}
+
+.cartItems img {
+  width: 5%;
 }
