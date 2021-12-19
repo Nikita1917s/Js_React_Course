@@ -1,0 +1,51 @@
+.list {
+
+}
+.footer {
+    font-size: 14px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address {
+    width: 150px;
+    /* border: 1px solid black; */
+}
+
+.tw {
+    background-image: url("../assets/tw.png");
+    width: 32px;
+    height: 27px;
+    z-index: 17;
+}
+.f {
+    background-image: url("../assets/f.png");
+    width: 13px;
+    height: 28px;
+    z-index: 15;
+}
+
+.insta {
+    background-image: url("../assets/insta.png");
+    width: 27px;
+    height: 27px;
+    z-index: 15;
+
+}
+
+.g {
+    background-image: url("../assets/g.png");
+    width: 29px;
+    height: 28px;
+    z-index: 15;
+
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
