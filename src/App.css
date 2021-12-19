@@ -1,8 +1,12 @@
 .App {
   text-align: center;
+  background: url(../src/assets/background.png);
+  padding-top: 15px;
 }
 
-.App-logo {
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +39,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
