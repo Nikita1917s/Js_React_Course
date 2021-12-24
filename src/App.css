@@ -57,6 +57,8 @@ header ul li a:hover {
   /* flex-wrap: wrap; */
   margin: 10px 0;
   text-align: center;
+  background: url(../src/assets/background.png);
+  padding-top: 15px;
 }
 
 .products ul li img {
@@ -68,8 +70,7 @@ header ul li a:hover {
   text-align: center;
   align-self: flex-end;
 }
-
-.products-details {
+  .products-details {
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -114,6 +115,16 @@ header ul li a:hover {
   width: 10%;
 }
 
+
+=======
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
 .cartItems img {
   width: 5%;
 }
