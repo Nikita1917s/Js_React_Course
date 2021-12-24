@@ -1,7 +1,7 @@
 import Header from './components/Header/Header';
 import './App.css';
 import Vlad from "./components/Vlad/index";
-import ItemsList from './components/ItemsList/ItemsList';
+import ItemsList from './Components/ItemsList/ItemsList';
 
 
 function App() {
