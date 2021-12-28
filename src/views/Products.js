@@ -1,27 +1,24 @@
 import { Link, useRouteMatch } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useContext } from "react";
-import Context from '.././context'
 import Button from "../components/Button";
 import constants from "../modules/constants";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchProducts} from "../api/products";
 
 function Products() {
-    const { cart } = useContext(Context)
-    const [list, setList] = useState([])
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(json => setList(json))
-    }, [])
+    let products = useSelector(state => state.products.products)
+    if(!products.length) {
+        dispatch(fetchProducts())
+    }
 
     let { url } = useRouteMatch()
-    console.log(cart)
+
     return (
         <div className="products">
             <h1>Products</h1>
             <ul>
-                {list.length ? list?.map(elem => <li key={elem.id}>
+                {products.length ? products?.map(elem => <li key={elem.id}>
                     <Link to={`${url}/${elem.id}`}>{elem.title}</Link>
                     <img src={elem.image} alt={elem.title}></img>
                     <h3>{elem.price}$</h3>

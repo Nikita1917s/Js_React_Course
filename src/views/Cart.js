@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import constants from "../modules/constants";
-import Context from '.././context'
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 function Cart() {
-    const { cart, setCart } = useContext(Context)
+
+    let cart = useSelector(state => state.products.cart)
+
     const calcPrice = (() => {
         let sum = 0;
 
