@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 code {
@@ -24,4 +25,26 @@ code {
   width: 800px;
   margin: 0 auto;
   display: flex;
+}
+
+.red{
+  background: red;
+}
+.green{
+  background: green;
+}
+
+.text{
+  position: absolute;
+  left: 0;
+  top: 25px;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 25px;
+  background: rgb(235, 80, 80);
 }

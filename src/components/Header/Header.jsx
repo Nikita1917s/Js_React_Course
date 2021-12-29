@@ -17,3 +17,8 @@ class Header extends React.Component {
 }
 
 export default Header
+
+// changePosition(step) {
+//     this.setState( {
+//         positionLeft: this.state.positionLeft += step
+//     })
