@@ -3,7 +3,6 @@ import Place from "./Place"
 
 const observable = new Observable();
 const cinemaInner = document.querySelector('.cinema__inner');
-const purchaseBtn = document.querySelector('.purchase');
 
 // Set correct row numeration 
 let rowsNumber = 0;
