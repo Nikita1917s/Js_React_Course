@@ -3,25 +3,23 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import constants from "../modules/constants";
 
-function Cart() {
-    let localStore = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
+const Cart = () => {
+    let localStore = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart') || '') : [];
     const [cartStore, setCart] = useState(localStore)
 
     const updateData = (() => {
-        localStore = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [];
+        localStore = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart') || '') : [];
         setCart(localStore)
     })
 
     const calcPrice = (() => {
         let sum = 0;
 
-        cartStore.forEach(element => {
+        cartStore.forEach((element: { price: number; amount: number; }) => {
             sum += (element.price * element.amount)
         });
         return sum.toFixed(2)
     })
-
-
 
     return (
         <div className="cart">
@@ -29,7 +27,7 @@ function Cart() {
             <h1>Sum: {calcPrice()}$</h1>
 
             <ul className="cartItems">
-                {cartStore.length ? cartStore?.map(elem => <li key={elem.id}>
+                {cartStore.length ? cartStore?.map((elem: { id: number; amount: number; image: string; title: string; price: number;}) => <li key={elem.id}>
                     <h3>Amount: {elem.amount}</h3>
                     <img src={elem.image} alt={elem.title}></img>
                     <Link to={`../products/${elem.id}`}>{elem.title}</Link>

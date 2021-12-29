@@ -36,9 +36,3 @@ function App() {
 }
 
 export default App;
-
-{/* <Route path='/' exact component={Home} />
-<Route path='/products' exact component={Products} />
-<Route path='/products/:productId' component={ProductsDetails} />
-<Route path='/cart' component={Cart} />
-<Route component={NotFound} /> */}
